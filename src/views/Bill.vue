@@ -1,9 +1,6 @@
 <template>
     <Layout>
         <header class="header">
-            <div class="logo">
-                <img :src="logo" alt="咸鱼记账"/>
-            </div>
             <div class="info">
                 <div class="calendar">
                     <select v-model="year" class="year">
@@ -61,7 +58,6 @@
     import Vue from 'vue';
     import {Component, Watch} from 'vue-property-decorator';
     import Layout from '@/components/Layout.vue';
-    import logo from '@/assets/logo.png';
     import Icon from '@/components/Icon.vue';
     import dayjs from 'dayjs';
     import clone from '@/lib/clone';
@@ -76,7 +72,6 @@
         components: {Blank, Icon, Layout}
     })
     export default class Bill extends Vue {
-        logo: string = logo;
         year = window.sessionStorage.getItem('year') || dayjs().year().toString();
         month = window.sessionStorage.getItem('month') || (dayjs().month() + 1).toString();
 
@@ -233,7 +228,7 @@
         background: #ffda47;
 
         .logo {
-            img {
+            svg {
                 height: 30px;
                 vertical-align: top;
                 margin-left: auto;

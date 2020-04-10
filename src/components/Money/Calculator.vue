@@ -7,7 +7,7 @@
             <span>备注:</span>
             <input type="text" placeholder="写点备注吧~" :value="note" @input="writeNote($event.target.value)">
         </label>
-        <div class="panel">{{output}}</div>
+        <div class="panel">¥{{output}}</div>
         <div class="number-pad">
             <button
                     v-for="(name, index) in buttonList" :key="index"
@@ -280,6 +280,8 @@
                 height: $h;
                 font-size: 16px;
                 border: none;
+                box-shadow: inset -3px -3px 1px rgba(0, 0, 0, 0.45);
+                border-radius: 12px;
 
                 &.ok {
                     float: right;

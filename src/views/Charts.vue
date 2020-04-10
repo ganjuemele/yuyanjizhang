@@ -1,7 +1,7 @@
 <template>
     <Layout>
         <header class="header">
-            <!--            <TabBar class-prefix="types" :bars="typeList" :c-bar.sync="type"/>-->
+            <!--   <TabBar class-prefix="types" :bars="typeList" :c-bar.sync="type"/>-->
             <select  v-model="type" class="type">
                 <option v-for="(t, index) in typeList" :key="index" :value="t.value">{{t.name}}</option>
             </select>
